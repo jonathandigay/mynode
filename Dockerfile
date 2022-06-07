@@ -1,12 +1,6 @@
 # parentimage
 FROM node:latest
 
-# creating main directory
-RUN mkdir /app
-
-# call main directory
-WORKDIR /app
-
 # install all dependencies
 RUN npm install
 
