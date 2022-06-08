@@ -1,4 +1,4 @@
-ROM node:alpine
+FROM node:alpine
 
 #Install some dependencies
 
