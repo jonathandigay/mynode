@@ -10,7 +10,7 @@ RUN npm install
 
 # first argument = source file
 #second argument = destination
-COPY ./app ./app
+COPY ./app/package.json ./app
 
 # command to run the application 
 CMD node index
