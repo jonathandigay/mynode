@@ -1,16 +1,14 @@
 # parentimage
 FROM node:latest
 
-RUN mkdir app
-
-WORKDIR ./app
+WORKDIR .
 
 # install all dependencies
 RUN npm install
 
 # first argument = source file
 #second argument = destination
-COPY ./app/package.json ./app
+COPY . .
 
 # command to run the application 
 CMD node index
