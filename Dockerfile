@@ -1,17 +1,10 @@
-# parentimage
-FROM node:alpine
+ROM node:alpine
 
-RUN mkdir app
+#Install some dependencies
 
-WORKDIR app
-
-# install all dependencies
+WORKDIR /usr/app
+COPY ./ /usr/app
 RUN npm install
 
-# first argument = source file
-#second argument = destination
-COPY . app
-
-# command to run the application 
-CMD ["node" ,"index.js"]
-
+# Set up a default command
+CMD [ "npm","start" ]
